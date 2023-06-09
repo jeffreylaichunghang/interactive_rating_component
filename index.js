@@ -11,14 +11,24 @@ buttons.forEach((e) => {
     e.target.style.backgroundColor = "var(--orange)";
     e.target.classList.add("checked")
 
-
-    document.querySelector("#submit").addEventListener("click", () => {
-      document.querySelector(".rating-state").style.display = "none";
-      document.querySelector(".success-message").style.display = "unset";
-
-      let score = document.getElementById("score").innerHTML
-      score = e.target.innerHTML
-      document.getElementById("score").innerHTML = score
-    })
+    let score = document.getElementById("score").innerHTML
+    score = e.target.innerHTML
+    document.getElementById("score").innerHTML = score
   })
+})
+
+document.querySelector("#submit").addEventListener("click", () => {
+  let checked = document.querySelector(".checked")
+  console.log(checked)
+  if (!checked) {
+    alert("Please vote before submit!")
+  }
+
+  document.querySelector(".rating-state").style.display = "none";
+  document.querySelector(".success-message").style.display = "unset";
+})
+
+document.querySelector("#return").addEventListener("click", () => {
+  document.querySelector(".rating-state").style.display = "unset";
+  document.querySelector(".success-message").style.display = "none";
 })
