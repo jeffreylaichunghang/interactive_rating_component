@@ -29,6 +29,10 @@ document.querySelector("#submit").addEventListener("click", () => {
 })
 
 document.querySelector("#return").addEventListener("click", () => {
+  let checked = document.querySelector(".checked")
+  checked.classList.remove("checked")
+  checked.style.backgroundColor = ""
+
   document.querySelector(".rating-state").style.display = "unset";
   document.querySelector(".success-message").style.display = "none";
 })
