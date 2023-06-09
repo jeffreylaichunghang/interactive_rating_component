@@ -1,5 +1,4 @@
 const buttons = document.querySelectorAll(".btn");
-//console.log(buttons)
 
 buttons.forEach((e) => {
   e.addEventListener("click", (e) => {
@@ -18,7 +17,7 @@ buttons.forEach((e) => {
       document.querySelector(".success-message").style.display = "unset";
 
       let score = document.getElementById("score").innerHTML
-      score += e.target.innerHTML
+      score = e.target.innerHTML
       document.getElementById("score").innerHTML = score
     })
   })
