@@ -1,4 +1,5 @@
 const buttons = document.querySelectorAll(".btn");
+// new comment
 
 buttons.forEach((e) => {
   e.addEventListener("click", (e) => {
